@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07000d">
+  <title>Ninja Glitch v2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="boot" class="boot">
+    <div class="boot-logo">NG</div>
+    <div class="boot-title">NINJA GLITCH</div>
+    <div class="boot-sub">INITIALIZING NEON INTERFACE</div>
+    <div class="progress"><i id="bootProgress"></i></div>
+  </div>
+
+  <section id="fingerprint" class="fingerprint-screen">
+    <div class="fp-kicker">/// BIOMETRIC INTERFACE</div>
+    <h1>NINJA <span>ACCESS</span></h1>
+    <p>Touch the fingerprint to initialize the local console.</p>
+    <button id="fpButton" class="fingerprint-btn" aria-label="Start fingerprint scan">
+      <span class="fp-lines"></span><span class="fp-icon">◉</span>
+    </button>
+    <div class="fp-status" id="fpStatus">TOUCH TO SCAN</div>
+    <div class="fp-progress"><i id="fpProgress"></i></div>
+    <button id="skipFp" class="skip-btn">SKIP</button>
+  </section>
+
+  <main id="app" class="app hidden">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn">☰</button>
+      <div>
+        <div class="brand">NINJA <b>GLITCH</b></div>
+        <div class="terminal-line">root@ninja:~$ <span id="statusText">ready</span></div>
+      </div>
+      <button class="icon-btn" id="powerBtn">⨯</button>
+    </header>
+
+    <section class="hero panel">
+      <div class="eyebrow">/// SECURE NEON CONSOLE</div>
+      <h1>CYBER<br><span>CONTROL</span></h1>
+      <p>Antarmuka simulasi bergaya cyber untuk latihan, UI testing, dan eksperimen lokal.</p>
+      <div class="hero-actions">
+        <button class="neon-btn" data-page="glitch">OPEN CONSOLE</button>
+        <button class="ghost-btn" data-page="ninja">NINJA LAB</button>
+      </div>
+      <div class="scan"></div>
+    </section>
+
+    <section class="section-title">
+      <span>01</span><h2>MODULES</h2>
+    </section>
+
+    <section class="grid">
+      <button class="tool-card" data-page="glitch"><span>⚡</span><b>GLITCH</b><small>Visual effects & console</small></button>
+      <button class="tool-card" data-page="osint"><span>◉</span><b>OSINT</b><small>Public-info analysis lab</small></button>
+      <button class="tool-card" data-page="network"><span>⌁</span><b>NETWORK LAB</b><small>Local stress simulation</small></button>
+      <button class="tool-card" data-page="wifi"><span>⌁</span><b>WI-FI LAB</b><small>Network education sandbox</small></button>
+      <button class="tool-card" data-page="otp"><span>#</span><b>OTP LAB</b><small>Dummy OTP workflow</small></button>
+      <button class="tool-card" data-page="rat"><span>☠</span><b>RAT LAB</b><small>Fake console simulation</small></button>
+    </section>
+
+    <section class="terminal panel">
+      <div class="terminal-head"><span>● ● ●</span><b>root@ninja:~# ninja_console</b><span>⌁</span></div>
+      <div id="console" class="console"></div>
+      <button id="runBtn" class="neon-btn full">EXECUTE SIMULATION →</button>
+    </section>
+  </main>
+
+  <nav class="nav">
+    <button data-page="home" class="active">⌂<small>HOME</small></button>
+    <button data-page="glitch">ϟ<small>GLITCH</small></button>
+    <button data-page="ninja">🥷<small>NINJA</small></button>
+    <button data-page="tools">▦<small>TOOLS</small></button>
+    <button data-page="lab">◇<small>LAB</small></button>
+    <button data-page="rat">☠<small>RAT</small></button>
+    <button data-page="history">≡<small>HISTORY</small></button>
+    <button data-page="settings">⚙<small>SETTINGS</small></button>
+  </nav>
+
+  <div id="drawer" class="drawer">
+    <div class="drawer-card panel">
+      <button id="closeDrawer" class="icon-btn">×</button>
+      <div class="eyebrow">NINJA PROFILE</div>
+      <h2>Zakss // Operator</h2>
+      <p>Local interface profile. Semua aksi di project ini berjalan sebagai simulasi.</p>
+      <div class="stat-row"><span>STATUS</span><b>ONLINE</b></div>
+      <div class="stat-row"><span>MODE</span><b>LOCAL</b></div>
+    </div>
+  </div>
+
+  <div id="pageModal" class="modal">
+    <div class="modal-card panel">
+      <div class="modal-head"><div><div id="modalKicker" class="eyebrow">MODULE</div><h2 id="modalTitle">GLITCH</h2></div><button id="modalClose" class="icon-btn">×</button></div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
